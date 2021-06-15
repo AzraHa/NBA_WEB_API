@@ -1,0 +1,2 @@
+rootProject.name = "Movies-WEB-API"
+include ':app'

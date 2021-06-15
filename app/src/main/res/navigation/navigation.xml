@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/titleFragment2">
+    <fragment
+        android:id="@+id/titleFragment2"
+        android:name="com.example.movies_web_api.TitleFragment"
+        android:label="@string/welcome"
+        tools:layout="@layout/fragment_title">
+        <action
+            android:id="@+id/action_titleFragment2_to_secondFragment"
+            app:destination="@id/secondFragment"
+            app:popUpTo="@id/titleFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/secondFragment"
+        android:name="com.example.movies_web_api.SecondFragment"
+        android:label="fragment_second"
+        tools:layout="@layout/fragment_second" />
+</navigation>
