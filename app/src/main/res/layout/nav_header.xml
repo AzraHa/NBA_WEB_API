@@ -4,24 +4,40 @@
     android:id="@+id/navHeader"
     android:layout_width="match_parent"
     android:layout_height="100dp"
-    android:background="@color/pink_dark"
+    android:background="@android:color/background_dark"
     android:padding="16dp"
     android:theme="@style/ThemeOverlay.AppCompat.Dark">
 
     <TextView
         android:id="@+id/welcome_text_id"
-        android:layout_width="match_parent"
-        android:layout_height="108dp"
+        android:layout_width="159dp"
+        android:layout_height="55dp"
         android:gravity="center|fill_vertical"
         android:orientation="vertical"
         android:text="@string/app_name"
-        android:textColor="@color/pink_second_light"
-        android:textColorLink="@color/pink"
+        android:textColor="@color/design_default_color_on_primary"
+        android:textColorLink="@color/white"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.636" />
+
+    <ImageView
+        android:id="@+id/iw_basketball"
+        android:layout_width="70dp"
+        android:layout_height="61dp"
+        android:background="@color/design_default_color_background"
+        android:contentDescription="@string/nbaimage"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/welcome_text_id"
+        app:layout_constraintHorizontal_bias="0.772"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.512"
+        app:srcCompat="@drawable/ic_basketball" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

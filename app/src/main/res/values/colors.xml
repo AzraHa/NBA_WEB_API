@@ -1,11 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="pink">#f06292</color>
-    <color name="pink_light">#ff94c2</color>
-    <color name="rose">#ef9a9a</color>
-    <color name="pink_second">#ef9a9a</color>
-    <color name="pink_second_light">#ffcccb</color>
-    <color name="pink_Second_dark">#ba6b6c</color>
-    <color name="black">#000</color>
-    <color name="pink_dark">#ba2d65</color>
+    <color name="colorPrimary">#ffffff</color>
+    <color name="colorPrimaryDark">#000000</color>
+    <color name="white">#ffffff</color>
 </resources>

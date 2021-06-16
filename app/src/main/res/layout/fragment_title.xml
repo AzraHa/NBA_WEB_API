@@ -6,19 +6,19 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/pink_second_light">
+        android:background="@android:color/background_dark">
 
         <ImageView
             android:id="@+id/movie_image_id"
             android:layout_width="115dp"
             android:layout_height="80dp"
-            android:contentDescription="@string/movieimage"
+            android:contentDescription="@string/app_name"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.499"
-            app:srcCompat="@drawable/ic_movie"
+            app:srcCompat="@drawable/ic_basketball"
             tools:ignore="VectorDrawableCompat" />
 
         <TextView
@@ -32,7 +32,7 @@
             android:layout_marginRight="32dp"
             android:gravity="center"
             android:text="@string/welcome"
-            android:textColor="@color/black"
+            android:textColor="@color/design_default_color_background"
             android:textSize="20sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -45,11 +45,11 @@
             android:id="@+id/button_start"
             android:layout_width="115dp"
             android:layout_height="wrap_content"
-            android:background="@color/pink_dark"
+            android:background="@color/design_default_color_background"
             android:text="@string/start"
-            android:textColor="@color/black"
+            android:textColor="@android:color/background_dark"
             android:textStyle="bold"
-            app:backgroundTint="@color/pink_dark"
+            app:backgroundTint="@color/design_default_color_background"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.498"
@@ -63,7 +63,7 @@
             android:layout_height="77dp"
             android:gravity="center"
             android:text="@string/to_app"
-            android:textColor="@color/black"
+            android:textColor="@color/design_default_color_background"
             android:textSize="20sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
