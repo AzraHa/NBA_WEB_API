@@ -1,12 +1,12 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context="com.example.movies_web_api.overview.OverviewFragment">
+    tools:context="com.example.nba_web_api.overview.OverviewFragment">
 
     <data>
         <variable
             name="viewModel"
-            type="com.example.movies_web_api.overview.OverviewViewModel" />
+            type="com.example.nba_web_api.overview.OverviewViewModel" />
     </data>
 
 

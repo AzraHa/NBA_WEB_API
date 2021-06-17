@@ -1,4 +1,4 @@
-package com.example.movies_web_api.network
+package com.example.nba_web_api.network
 
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory

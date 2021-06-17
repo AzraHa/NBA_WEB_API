@@ -1,11 +1,11 @@
-package com.example.movies_web_api.overview
+package com.example.nba_web_api.overview
 
 import android.os.Bundle
 import android.view.*
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
-import com.example.movies_web_api.R
-import com.example.movies_web_api.databinding.FragmentOverviewBinding
+import com.example.nba_web_api.R
+import com.example.nba_web_api.databinding.FragmentOverviewBinding
 
 class OverviewFragment : Fragment() {
 

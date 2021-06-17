@@ -1,4 +1,4 @@
-package com.example.movies_web_api
+package com.example.nba_web_api
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4

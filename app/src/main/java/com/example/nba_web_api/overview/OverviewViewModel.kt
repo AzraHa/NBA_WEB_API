@@ -1,11 +1,10 @@
-package com.example.movies_web_api.overview
+package com.example.nba_web_api.overview
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.movies_web_api.network.NBAApi
-import kotlinx.coroutines.launch
+import com.example.nba_web_api.network.NBAApi
 import kotlinx.coroutines.launch
 
 

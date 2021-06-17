@@ -1,2 +1,2 @@
-rootProject.name = "Movies-WEB-API"
+rootProject.name = "NBA-WEB-API"
 include ':app'

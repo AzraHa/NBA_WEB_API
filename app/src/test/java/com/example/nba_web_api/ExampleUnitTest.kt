@@ -1,4 +1,4 @@
-package com.example.movies_web_api
+package com.example.nba_web_api
 
 import org.junit.Test
 

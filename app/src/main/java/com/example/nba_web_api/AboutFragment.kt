@@ -1,4 +1,4 @@
-package com.example.movies_web_api
+package com.example.nba_web_api
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

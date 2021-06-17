@@ -1,4 +1,4 @@
-package com.example.movies_web_api.network
+package com.example.nba_web_api.network
 
 data class NBAProperty(
     val data : List<Data>,
