@@ -16,6 +16,6 @@
     <fragment
         android:id="@+id/overviewFragment"
         android:name="com.example.nba_web_api.overview.OverviewFragment"
-        android:label="fragment_overview"
+        android:label="Overview"
         tools:layout="@layout/fragment_overview" />
 </navigation>
