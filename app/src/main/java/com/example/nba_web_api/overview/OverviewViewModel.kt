@@ -5,7 +5,11 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.nba_web_api.network.NBAApi
+import com.example.nba_web_api.network.NBAProperty
 import kotlinx.coroutines.launch
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
 
 
 /**
@@ -32,13 +36,22 @@ class OverviewViewModel : ViewModel() {
      * Mars properties retrieved.
      */
     private fun getNBAProperties() {
-        viewModelScope.launch {
-            try {
-                val listResult = NBAApi.retrofitService.getProperties()
-                _response.value = "Success: ${listOf(listResult)} Mars properties retrieved"
-            } catch (e: Exception) {
-                _response.value = "Failure: ${e.message}"
+        NBAApi.retrofitService.getPlayers("nurkic")?.enqueue(
+            object: Callback<NBAProperty?> {
+
+                override fun onResponse(
+                    call: Call<NBAProperty?>,
+                    response: Response<NBAProperty?>
+                ) {
+                    _response.value =
+                        "Success: ${response.body()} Mars properties retrieved"}
+
+                override fun onFailure(call: Call<NBAProperty?>, t: Throwable) {
+                    _response.value =
+                        "Error: " + t.message + t.localizedMessage + t.cause
+                }
+
             }
-        }
+        )
     }
 }
