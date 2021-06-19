@@ -31,9 +31,7 @@ interface NBAApiService {
         "X-Rapidapi-Host: free-nba.p.rapidapi.com"
     )
     @GET("players")
-    fun getPlayers(@Query("search") search: String): Call<NBAProperty?>?
-//    fun getProperties():
-//            Call<String>
+    fun getPlayers(@Query("search") search: String): Call<NBAProperty>
 
 }
 
