@@ -4,7 +4,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.example.nba_web_api.network.NBAApi
-import com.example.nba_web_api.network.NBAProperty
+import com.example.nba_web_api.network.dataNBA.NBATeams
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -34,19 +34,17 @@ class OverviewViewModel : ViewModel() {
      * Mars properties retrieved.
      */
     private fun getNBAProperties() {
-        NBAApi.retrofitService.getPlayers("").enqueue(
-            object: Callback<NBAProperty> {
+        NBAApi.retrofitService.getTeams().enqueue(
+            object: Callback<NBATeams> {
 
-                override fun onResponse(call: Call<NBAProperty>, response: Response<NBAProperty>) {
+                override fun onResponse(call: Call<NBATeams>, response: Response<NBATeams>) {
                     _response.value = response.body().toString()
                 }
 
-                override fun onFailure(call: Call<NBAProperty>, t: Throwable) {
+                override fun onFailure(call: Call<NBATeams>, t: Throwable) {
                     _response.value =
                         "Error: " + t.message
                 }
-
-            }
-        )
+            })
     }
 }

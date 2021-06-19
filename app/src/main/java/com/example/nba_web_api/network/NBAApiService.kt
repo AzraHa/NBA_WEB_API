@@ -1,5 +1,9 @@
 package com.example.nba_web_api.network
 
+import com.example.nba_web_api.network.dataNBA.NBAGames
+import com.example.nba_web_api.network.dataNBA.NBAOneTeam
+import com.example.nba_web_api.network.dataNBA.NBAPlayers
+import com.example.nba_web_api.network.dataNBA.NBATeams
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
 import okhttp3.OkHttpClient
@@ -30,8 +34,17 @@ interface NBAApiService {
         "X-Rapidapi-Key: 7e7560beebmshd996222ae228edap123221jsn2926c218329d",
         "X-Rapidapi-Host: free-nba.p.rapidapi.com"
     )
-    @GET("players")
-    fun getPlayers(@Query("search") search: String): Call<NBAProperty>
+   // @GET("players")
+    //fun getPlayers(@Query("search") search: String): Call<NBAPlayers>
+
+   @GET("teams")
+    fun getTeams(): Call<NBATeams>
+
+  //  @GET("teams/14")
+   // fun getSpecificTeam() : Call<NBAOneTeam>
+
+  // @GET("games")
+    //fun getGames(@Query("per_page") search: String): Call<NBAGames>
 
 }
 
