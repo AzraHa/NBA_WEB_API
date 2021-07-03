@@ -38,7 +38,8 @@ interface NBAApiService {
     //fun getPlayers(@Query("search") search: String): Call<NBAPlayers>
 
    @GET("teams")
-    fun getTeams(): Call<NBATeams>
+    suspend fun getTeams(): NBATeams
+
 
   //  @GET("teams/14")
    // fun getSpecificTeam() : Call<NBAOneTeam>
