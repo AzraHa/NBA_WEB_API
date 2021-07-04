@@ -7,9 +7,6 @@ import androidx.lifecycle.viewModelScope
 import com.example.nba_web_api.network.NBAApi
 import com.example.nba_web_api.network.dataNBA.NBATeams
 import kotlinx.coroutines.launch
-import retrofit2.Call
-import retrofit2.Callback
-import retrofit2.Response
 
 
 /**
@@ -17,13 +14,12 @@ import retrofit2.Response
  */
 class OverviewViewModel : ViewModel() {
 
-    // The internal MutableLiveData String that stores the most recent response
-    private val _response = MutableLiveData<String>()
 
-    // The external immutable LiveData for the response String
-    val response: LiveData<String>
-        get() = _response
+    private val _properties = MutableLiveData<NBATeams>()
 
+    // The external LiveData interface to the property is immutable, so only this class can modify
+    val properties: LiveData<NBATeams>
+        get() = _properties
     /**
      * Call getMarsRealEstateProperties() on init so we can display status immediately.
      */
@@ -36,12 +32,11 @@ class OverviewViewModel : ViewModel() {
      * Mars properties retrieved.
      */
     private fun getNBAProperties() {
+
         viewModelScope.launch {
             try {
-                val listResult = NBAApi.retrofitService.getTeams()
-                _response.value = "Success: ${listResult.data} Mars properties retrieved"
+                _properties.value = NBAApi.retrofitService.getTeams()
             } catch (e: Exception) {
-                _response.value = "Failure: ${e.message}"
             }
         }
     }

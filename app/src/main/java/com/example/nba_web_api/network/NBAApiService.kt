@@ -1,19 +1,16 @@
 package com.example.nba_web_api.network
 
-import com.example.nba_web_api.network.dataNBA.NBAGames
-import com.example.nba_web_api.network.dataNBA.NBAOneTeam
-import com.example.nba_web_api.network.dataNBA.NBAPlayers
+
+import com.example.nba_web_api.network.dataNBA.DataTeams
 import com.example.nba_web_api.network.dataNBA.NBATeams
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
-import retrofit2.Call
 import retrofit2.Retrofit
 import retrofit2.converter.moshi.MoshiConverterFactory
 import retrofit2.http.GET
 import retrofit2.http.Headers
-import retrofit2.http.Query
 
 private val logging : HttpLoggingInterceptor = HttpLoggingInterceptor().setLevel(HttpLoggingInterceptor.Level.BODY)
 val httpClient: OkHttpClient.Builder = OkHttpClient.Builder().addInterceptor(logging)

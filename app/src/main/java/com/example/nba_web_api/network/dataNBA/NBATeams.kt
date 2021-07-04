@@ -1,8 +1,9 @@
 package com.example.nba_web_api.network.dataNBA
 
 data class NBATeams(
-    val data: List<DataTeams>,
+    val data: List<DataTeams>
 )
+
 data class DataTeams(
     val abbreviation: String? = "",
     val city: String? = "",

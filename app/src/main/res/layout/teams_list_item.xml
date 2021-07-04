@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.nba_web_api.MainActivity">
+    <data>
+        <variable
+            name="property"
+            type="com.example.nba_web_api.network.dataNBA.DataTeams" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="401dp"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/team_name"
+            android:layout_width="216dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="36dp"
+            android:adjustViewBounds="true"
+            android:padding="2dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.619"
+            app:layout_constraintStart_toEndOf="@+id/basketball"
+            app:layout_constraintTop_toTopOf="parent"
+            android:text="@{property.full_name.toString()}"
+            tools:ignore="MissingConstraints"
+            tools:src="@tools:sample/backgrounds/scenic" />
+
+        <TextView
+            android:id="@+id/full_name"
+            android:layout_width="216dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="20dp"
+            android:width="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.619"
+            app:layout_constraintStart_toEndOf="@+id/basketball"
+            app:layout_constraintTop_toBottomOf="@+id/team_name"
+            android:text="@{property.name.toString()}" />
+
+        <ImageView
+            android:id="@+id/basketball"
+            android:layout_width="148dp"
+            android:layout_height="150dp"
+            app:srcCompat="@drawable/ic_basketball"
+            tools:ignore="MissingConstraints,VectorDrawableCompat"
+            tools:layout_editor_absoluteX="2dp"
+            tools:layout_editor_absoluteY="38dp"
+            />
+
+        <TextView
+            android:id="@+id/abbreviation"
+            android:layout_width="216dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.619"
+            app:layout_constraintStart_toEndOf="@+id/basketball"
+            app:layout_constraintTop_toBottomOf="@+id/city"
+            app:text="@{property.division.toString()}" />
+
+        <TextView
+            android:id="@+id/city"
+            android:layout_width="216dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="64dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.619"
+            app:layout_constraintStart_toEndOf="@+id/basketball"
+            app:layout_constraintTop_toBottomOf="@+id/team_name" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
