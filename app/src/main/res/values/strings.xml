@@ -12,4 +12,9 @@
     <string name="Players">Players</string>
     <string name="Games">Games</string>
     <string name="chose">Chose</string>
+    <string name="name">Name</string>
+    <string name="city">City</string>
+    <string name="abbreviation">Abbreviation</string>
+    <string name="division">Division</string>
+    <string name="Full_name">Full name</string>
 </resources>

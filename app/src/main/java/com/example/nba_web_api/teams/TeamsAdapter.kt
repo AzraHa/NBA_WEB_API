@@ -8,7 +8,8 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.nba_web_api.databinding.TeamsListItemBinding
 import com.example.nba_web_api.network.dataNBA.DataTeams
 
-class TeamsAdapter : ListAdapter<DataTeams, TeamsAdapter.NBAPropertyViewHolder>(DiffCallback) {
+class TeamsAdapter( private val onClickListener: OnClickListener ) : ListAdapter<DataTeams, TeamsAdapter.NBAPropertyViewHolder>(DiffCallback) {
+
     class NBAPropertyViewHolder(private var binding: TeamsListItemBinding):
         RecyclerView.ViewHolder(binding.root) {
         fun bind(NBATeamsProperty: DataTeams) {
@@ -41,7 +42,14 @@ class TeamsAdapter : ListAdapter<DataTeams, TeamsAdapter.NBAPropertyViewHolder>(
      */
     override fun onBindViewHolder(holder: NBAPropertyViewHolder, position: Int) {
         val nBATeamsProperty = getItem(position)
+        holder.itemView.setOnClickListener {
+            onClickListener.onClick(nBATeamsProperty)
+        }
         holder.bind(nBATeamsProperty)
     }
+    class OnClickListener(val clickListener: (teamsProperty:DataTeams) -> Unit) {
+        fun onClick(teamsProperty:DataTeams) = clickListener(teamsProperty)
+    }
+
 
 }

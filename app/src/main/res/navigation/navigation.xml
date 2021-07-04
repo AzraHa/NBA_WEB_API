@@ -16,7 +16,6 @@
     <fragment
         android:id="@+id/selectFragment"
         android:name="com.example.nba_web_api.SelectFragment"
-        android:label="SELECT"
         tools:layout="@layout/fragment_select">
         <action
             android:id="@+id/action_selectFragment_to_gamesFragment"
@@ -37,10 +36,37 @@
         android:id="@+id/teamsFragment"
         android:name="com.example.nba_web_api.teams.TeamsFragment"
         android:label="NBATEAMS"
-        tools:layout="@layout/fragment_teams" />
+        tools:layout="@layout/fragment_teams" >
+        <action
+            android:id="@+id/action_teamsFragment_to_teamsDetailFragment"
+            app:destination="@id/teamsDetailFragment" />
+    </fragment>
     <fragment
         android:id="@+id/playersFragment"
         android:name="com.example.nba_web_api.players.PlayersFragment"
         android:label="PLAYERS"
-        tools:layout="@layout/fragment_players" />
+        tools:layout="@layout/fragment_players" >
+        <action
+            android:id="@+id/action_playersFragment_to_playersDetailFragment"
+            app:destination="@id/playersDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/teamsDetailFragment"
+        android:name="com.example.nba_web_api.teams.TeamsDetailFragment"
+        android:label="TEAM"
+        tools:layout="@layout/fragment_teams_detail">
+        <argument
+            android:name="teamId"
+            app:argType="com.example.nba_web_api.network.dataNBA.DataTeams" />
+    </fragment>
+    <fragment
+        android:id="@+id/playersDetailFragment"
+        android:name="com.example.nba_web_api.players.PlayersDetailFragment"
+        android:label="fragment_players_detail"
+        tools:layout="@layout/fragment_players_detail">
+        <argument
+            android:name="playerId"
+            app:argType="com.example.nba_web_api.network.dataNBA.DataPlayers"
+            app:nullable="true" />
+    </fragment>
 </navigation>
