@@ -1,7 +1,6 @@
 package com.example.nba_web_api.network
 
-
-import com.example.nba_web_api.network.dataNBA.DataTeams
+import com.example.nba_web_api.network.dataNBA.NBAPlayers
 import com.example.nba_web_api.network.dataNBA.NBATeams
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
@@ -11,6 +10,7 @@ import retrofit2.Retrofit
 import retrofit2.converter.moshi.MoshiConverterFactory
 import retrofit2.http.GET
 import retrofit2.http.Headers
+import retrofit2.http.Query
 
 private val logging : HttpLoggingInterceptor = HttpLoggingInterceptor().setLevel(HttpLoggingInterceptor.Level.BODY)
 val httpClient: OkHttpClient.Builder = OkHttpClient.Builder().addInterceptor(logging)
@@ -31,8 +31,8 @@ interface NBAApiService {
         "X-Rapidapi-Key: 7e7560beebmshd996222ae228edap123221jsn2926c218329d",
         "X-Rapidapi-Host: free-nba.p.rapidapi.com"
     )
-   // @GET("players")
-    //fun getPlayers(@Query("search") search: String): Call<NBAPlayers>
+//   @GET("players")
+//    fun getPlayers(@Query("search") search: String): NBAPlayers
 
    @GET("teams")
     suspend fun getTeams(): NBATeams

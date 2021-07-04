@@ -4,15 +4,16 @@ data class NBAPlayers(
     val data: List<DataPlayers>
 )
 data class DataPlayers(
-    val first_name: String? = "",
-    val height_feet: Int? = 0,
-    val height_inches: Int? = 0,
     val id: Int,
+    val first_name: String? = "",
     val last_name: String? = "",
+    val height_inches: Int? = 0,
+    val height_feet: Int? = 0,
     val position: String? = "",
     val team: PlayerTeam,
     val weight_pounds: Int? = 0
 )
+
 data class PlayerTeam(
     val abbreviation: String? = "",
     val city: String? = "",

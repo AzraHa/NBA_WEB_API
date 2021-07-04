@@ -21,7 +21,7 @@ class TitleFragment : Fragment() {
             R.layout.fragment_title, container, false
         )
         binding.buttonStart.setOnClickListener { view: View ->
-            view.findNavController().navigate(R.id.action_titleFragment2_to_overviewFragment)
+            view.findNavController().navigate(R.id.action_titleFragment2_to_selectFragment)
         }
         setHasOptionsMenu(true)
         return binding.root

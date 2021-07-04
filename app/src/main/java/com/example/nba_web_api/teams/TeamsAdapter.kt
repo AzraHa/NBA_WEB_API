@@ -1,4 +1,4 @@
-package com.example.nba_web_api.overview
+package com.example.nba_web_api.teams
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -7,7 +7,6 @@ import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.example.nba_web_api.databinding.TeamsListItemBinding
 import com.example.nba_web_api.network.dataNBA.DataTeams
-import com.example.nba_web_api.network.dataNBA.NBATeams
 
 class TeamsAdapter : ListAdapter<DataTeams, TeamsAdapter.NBAPropertyViewHolder>(DiffCallback) {
     class NBAPropertyViewHolder(private var binding: TeamsListItemBinding):

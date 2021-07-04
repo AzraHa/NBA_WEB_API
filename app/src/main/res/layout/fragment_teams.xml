@@ -1,12 +1,12 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context="com.example.nba_web_api.overview.OverviewFragment">
+    tools:context="com.example.nba_web_api.teams.TeamsFragment">
 
     <data>
         <variable
             name="viewModel"
-            type="com.example.nba_web_api.overview.OverviewViewModel" />
+            type="com.example.nba_web_api.teams.TeamsViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -15,11 +15,14 @@
 
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/photos_grid"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:padding="6dp"
+            android:id="@+id/teamsLinearLayout"
+            style="@style/Widget.AppCompat.Button.Borderless.Colored"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clickable="true"
             android:clipToPadding="false"
+            android:focusable="true"
+            android:padding="6dp"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"

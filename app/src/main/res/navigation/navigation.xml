@@ -10,12 +10,37 @@
         android:label="@string/welcome"
         tools:layout="@layout/fragment_title">
         <action
-            android:id="@+id/action_titleFragment2_to_overviewFragment"
-            app:destination="@id/overviewFragment" />
+            android:id="@+id/action_titleFragment2_to_selectFragment"
+            app:destination="@id/selectFragment" />
     </fragment>
     <fragment
-        android:id="@+id/overviewFragment"
-        android:name="com.example.nba_web_api.overview.OverviewFragment"
-        android:label="NBA Teams"
-        tools:layout="@layout/fragment_overview" />
+        android:id="@+id/selectFragment"
+        android:name="com.example.nba_web_api.SelectFragment"
+        android:label="SELECT"
+        tools:layout="@layout/fragment_select">
+        <action
+            android:id="@+id/action_selectFragment_to_gamesFragment"
+            app:destination="@id/gamesFragment" />
+        <action
+            android:id="@+id/action_selectFragment_to_teamsFragment"
+            app:destination="@id/teamsFragment" />
+        <action
+            android:id="@+id/action_selectFragment_to_playersFragment"
+            app:destination="@id/playersFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/gamesFragment"
+        android:name="com.example.nba_web_api.games.GamesFragment"
+        android:label="NBAGAMES"
+        tools:layout="@layout/fragment_games" />
+    <fragment
+        android:id="@+id/teamsFragment"
+        android:name="com.example.nba_web_api.teams.TeamsFragment"
+        android:label="NBATEAMS"
+        tools:layout="@layout/fragment_teams" />
+    <fragment
+        android:id="@+id/playersFragment"
+        android:name="com.example.nba_web_api.players.PlayersFragment"
+        android:label="PLAYERS"
+        tools:layout="@layout/fragment_players" />
 </navigation>
