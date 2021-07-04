@@ -72,7 +72,7 @@
             app:layout_constraintHorizontal_bias="0.619"
             app:layout_constraintStart_toEndOf="@+id/basketball"
             app:layout_constraintTop_toBottomOf="@+id/team_name"
-            app:text="@{property.division.toString()}" />
+            app:text="@{property.city.toString()}" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
