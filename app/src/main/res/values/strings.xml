@@ -31,5 +31,7 @@
     <string name="select">SELECT</string>
     <string name="full_name">Full name</string>
     <string name="conference">Conference</string>
+    <string name="about_text">Ovo je drugi projekat koji su .\nnapravili studenti Riad Pap i Azra Hadžihajdarević kao projekat iz predmeta Razvoj mobilnih aplikacija.\n\nAplikacija je rađena u programskom jeziku <b>Kotlin</b>.</string>
+
 
 </resources>
