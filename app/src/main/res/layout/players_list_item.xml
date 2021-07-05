@@ -16,76 +16,138 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/players_list_id"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="206dp">
 
-        <TextView
-            android:id="@+id/team_name"
-            android:layout_width="216dp"
-            android:layout_height="20dp"
-            android:layout_marginTop="36dp"
-            android:adjustViewBounds="true"
-            android:padding="2dp"
-            android:scaleType="centerCrop"
-            android:text="@{property.first_name.toString()}"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.619"
-            app:layout_constraintStart_toEndOf="@+id/basketball"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:ignore="MissingConstraints"
-            tools:src="@tools:sample/backgrounds/scenic" />
+        <LinearLayout
+            android:layout_width="392dp"
+            android:layout_height="142dp"
+            android:layout_marginTop="48dp"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
-        <TextView
-            android:id="@+id/full_name"
-            android:layout_width="216dp"
-            android:layout_height="20dp"
-            android:layout_marginTop="20dp"
-            android:width="20dp"
-            android:text="@{property.last_name.toString()}"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.619"
-            app:layout_constraintStart_toEndOf="@+id/basketball"
-            app:layout_constraintTop_toBottomOf="@+id/team_name" />
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="137dp"
+                android:layout_height="153dp"
+                app:srcCompat="@drawable/ic_person" />
 
-        <ImageView
-            android:id="@+id/basketball"
-            android:layout_width="148dp"
-            android:layout_height="150dp"
-            app:srcCompat="@drawable/ic_person"
-            tools:ignore="MissingConstraints,VectorDrawableCompat"
-            tools:layout_editor_absoluteX="2dp"
-            tools:layout_editor_absoluteY="38dp" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/abbreviation"
-            android:layout_width="216dp"
-            android:layout_height="20dp"
-            android:layout_marginTop="20dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.619"
-            app:layout_constraintStart_toEndOf="@+id/basketball"
-            app:layout_constraintTop_toBottomOf="@+id/city"
-            app:text="@{property.height_feet.toString()}" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:orientation="horizontal">
 
-        <TextView
-            android:id="@+id/city"
-            android:layout_width="216dp"
-            android:layout_height="20dp"
-            android:layout_marginTop="64dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.619"
-            app:layout_constraintStart_toEndOf="@+id/basketball"
-            app:layout_constraintTop_toBottomOf="@+id/team_name" />
+                    <TextView
+                        android:id="@+id/first_name"
+                        android:layout_width="77dp"
+                        android:layout_height="20dp"
+                        android:width="20dp"
+                        android:gravity="center"
+                        android:text="@string/first_name"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.619"
+                        app:layout_constraintStart_toEndOf="@+id/basketball"
+                        app:layout_constraintTop_toBottomOf="@+id/team_name" />
 
-        <Button
-            android:id="@+id/team_name_id"
-            android:layout_width="216dp"
-            android:layout_height="20dp"
-            android:layout_marginTop="64dp"
-            android:text="@{property_team.name.toString()}"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.619"
-            app:layout_constraintStart_toEndOf="@+id/basketball"
-            app:layout_constraintTop_toBottomOf="@+id/team_name" />
+                    <TextView
+                        android:id="@+id/textView3"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:gravity="center"
+                        android:text="@{property.first_name.toString()}"
+                        android:textStyle="italic" />
+                </LinearLayout>
 
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/last_name"
+                        android:layout_width="77dp"
+                        android:layout_height="20dp"
+                        android:width="20dp"
+                        android:gravity="center"
+                        android:text="@string/last_name"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.619"
+                        app:layout_constraintStart_toEndOf="@+id/basketball"
+                        app:layout_constraintTop_toBottomOf="@+id/team_name" />
+
+                    <TextView
+                        android:id="@+id/last_name1"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:gravity="center"
+                        android:text="@{property.last_name.toString()}"
+                        android:textStyle="italic" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/position"
+                        android:layout_width="77dp"
+                        android:layout_height="20dp"
+                        android:width="20dp"
+                        android:gravity="center"
+                        android:text="@string/position"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.619"
+                        app:layout_constraintStart_toEndOf="@+id/basketball"
+                        app:layout_constraintTop_toBottomOf="@+id/team_name" />
+
+                    <TextView
+                        android:id="@+id/position1"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:gravity="center"
+                        android:text="@{property.position.toString()}"
+                        android:textStyle="italic" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/team"
+                        android:layout_width="77dp"
+                        android:layout_height="20dp"
+                        android:width="20dp"
+                        android:gravity="center"
+                        android:text="@string/team"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.619"
+                        app:layout_constraintStart_toEndOf="@+id/basketball"
+                        app:layout_constraintTop_toBottomOf="@+id/team_name" />
+
+                    <TextView
+                        android:id="@+id/team1"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:gravity="center"
+                        android:text="@{property.team.toString()}"
+                        android:textStyle="italic" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

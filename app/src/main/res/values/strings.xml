@@ -21,4 +21,9 @@
     <string name="teamAbbr">Team abbreviation</string>
     <string name="height">Height</string>
     <string name="weight">Weight</string>
+    <string name="first_name">First name</string>
+    <string name="last_name">Last name</string>
+    <string name="height_inches">Height inches</string>
+    <string name="position">Position</string>
+    <string name="weight_pounds">Weight pounds</string>
 </resources>
