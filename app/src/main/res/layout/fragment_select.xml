@@ -10,8 +10,8 @@
         android:orientation="vertical">
 
         <LinearLayout
-            android:layout_width="355dp"
-            android:layout_height="661dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:layout_margin="30dp"
             android:layout_marginBottom="0dp"
             android:orientation="vertical"
@@ -27,7 +27,7 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:orientation="vertical"
-                android:text="@string/choose"
+                android:text="@string/select"
                 android:textColor="@color/colorSecondaryDark"
                 android:textColorLink="@color/colorPrimaryDark"
                 android:textSize="20sp"
