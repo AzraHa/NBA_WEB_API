@@ -19,9 +19,6 @@ class SelectFragment : Fragment() {
             R.layout.fragment_select, container, false
         )
 
-        binding.gamesId.setOnClickListener { view: View ->
-            view.findNavController().navigate(R.id.action_selectFragment_to_gamesFragment)
-        }
         binding.playersId.setOnClickListener { view: View ->
             view.findNavController().navigate(R.id.action_selectFragment_to_playersFragment)
         }
