@@ -26,9 +26,9 @@ class TeamsDetailFragment : Fragment() {
         val binding = FragmentTeamsDetailBinding.inflate(inflater)
         binding.lifecycleOwner = this
 
-        teamName = binding.teamFullNameTv1.toString()
-        teamCity = binding.teamCityTv1.toString()
-        teamFullName = binding.teamFullNameTv1.toString()
+        teamName = binding.teamFullNameTv1.text.toString()
+        teamCity = binding.teamCityTv1.text.toString()
+        teamFullName = binding.teamFullNameTv1.text.toString()
 
         val teamsProperty = TeamsDetailFragmentArgs.fromBundle(arguments!!).teamId
         val viewModelFactory = TeamsDetailViewModelFactory(teamsProperty, application)
