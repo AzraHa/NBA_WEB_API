@@ -7,7 +7,7 @@
 
     <data>
         <variable
-            name="viewModel"
+            name="viewModelTeamsDetail"
             type="com.example.nba_web_api.teams.TeamsDetailViewModel" />
     </data>
 
@@ -39,7 +39,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="@{viewModel.selectedProperty.name}"
+                android:text="@{viewModelTeamsDetail.selectedProperty.name}"
                 android:textSize="14sp"
                 android:textStyle="bold" />
 
@@ -64,7 +64,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="@{viewModel.selectedProperty.city}"
+                android:text="@{viewModelTeamsDetail.selectedProperty.city}"
                 android:textSize="14sp"
                 android:textStyle="bold" />
         </LinearLayout>
@@ -88,7 +88,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="@{viewModel.selectedProperty.abbreviation}"
+                android:text="@{viewModelTeamsDetail.selectedProperty.abbreviation}"
                 android:textSize="14sp"
                 android:textStyle="bold" />
         </LinearLayout>
@@ -113,7 +113,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="@{viewModel.selectedProperty.division}"
+                android:text="@{viewModelTeamsDetail.selectedProperty.division}"
                 android:textSize="14sp"
                 android:textStyle="bold" />
         </LinearLayout>
@@ -137,7 +137,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="@{viewModel.selectedProperty.full_name}"
+                android:text="@{viewModelTeamsDetail.selectedProperty.full_name}"
                 android:textSize="14sp"
                 android:textStyle="bold" />
         </LinearLayout>

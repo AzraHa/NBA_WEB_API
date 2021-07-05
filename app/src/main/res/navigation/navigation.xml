@@ -62,7 +62,7 @@
     <fragment
         android:id="@+id/playersDetailFragment"
         android:name="com.example.nba_web_api.players.PlayersDetailFragment"
-        android:label="fragment_players_detail"
+        android:label="PLAYER DETAILS"
         tools:layout="@layout/fragment_players_detail">
         <argument
             android:name="playerId"

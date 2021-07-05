@@ -23,7 +23,7 @@ class TeamsFragment : Fragment() {
         binding.lifecycleOwner = this
 
         // Giving the binding access to the TeamsViewModel
-        binding.viewModel = viewModel
+        binding.viewModelTeams = viewModel
 
         binding.teamsLinearLayout.adapter = TeamsAdapter(TeamsAdapter.OnClickListener {
             viewModel.displayPropertyDetails(it)

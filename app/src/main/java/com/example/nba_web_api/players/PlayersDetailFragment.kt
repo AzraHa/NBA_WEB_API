@@ -21,7 +21,7 @@ class PlayersDetailFragment : Fragment() {
 
         val playersProperty = PlayersDetailFragmentArgs.fromBundle(arguments!!).playerId
         val viewModelFactory = PlayersDetailViewModelFactory(playersProperty, application)
-        binding.viewModel = ViewModelProvider(
+        binding.viewModelPlayersDetail = ViewModelProvider(
             this, viewModelFactory).get(PlayersDetailViewModel::class.java)
 
         return binding.root

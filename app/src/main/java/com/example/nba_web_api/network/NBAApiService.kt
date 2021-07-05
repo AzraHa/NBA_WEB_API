@@ -32,7 +32,7 @@ interface NBAApiService {
         "X-Rapidapi-Host: free-nba.p.rapidapi.com"
     )
     @GET("players")
-    fun getPlayers(@Query("search") search: String): NBAPlayers
+    suspend fun getPlayers(@Query("search") search: String): NBAPlayers
 
    @GET("teams")
     suspend fun getTeams(): NBATeams

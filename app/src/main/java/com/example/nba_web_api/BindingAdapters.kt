@@ -9,14 +9,13 @@ import com.example.nba_web_api.teams.TeamsAdapter
 
 
 @BindingAdapter("listData")
-fun bindRecyclerView(recyclerView: RecyclerView, data: List<DataTeams>?) {
+fun bindRecyclerViewTeams(recyclerView: RecyclerView, data: List<DataTeams>?) {
     val adapter = recyclerView.adapter as TeamsAdapter
     adapter.submitList(data)
 }
 
-@JvmName("bindRecyclerView1")
 @BindingAdapter("playersListData")
-fun bindRecyclerView(recyclerView: RecyclerView, data: List<DataPlayers>?) {
+fun bindRecyclerViewPlayers(recyclerView: RecyclerView, data: List<DataPlayers>?) {
     val adapter = recyclerView.adapter as PlayersAdapter
     adapter.submitList(data)
 }

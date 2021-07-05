@@ -11,10 +11,14 @@
     <string name="Teams">Teams</string>
     <string name="Players">Players</string>
     <string name="Games">Games</string>
-    <string name="chose">Chose</string>
+    <string name="choose">Choose</string>
     <string name="name">Name</string>
     <string name="city">City</string>
     <string name="abbreviation">Abbreviation</string>
     <string name="division">Division</string>
     <string name="Full_name">Full name</string>
+    <string name="team">Team</string>
+    <string name="teamAbbr">Team abbreviation</string>
+    <string name="height">Height</string>
+    <string name="weight">Weight</string>
 </resources>

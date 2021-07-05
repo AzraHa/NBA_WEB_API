@@ -21,7 +21,7 @@ class TeamsDetailFragment: Fragment() {
 
         val teamsProperty = TeamsDetailFragmentArgs.fromBundle(arguments!!).teamId
         val viewModelFactory = TeamsDetailViewModelFactory(teamsProperty, application)
-        binding.viewModel = ViewModelProvider(
+        binding.viewModelTeamsDetail = ViewModelProvider(
             this, viewModelFactory).get(TeamsDetailViewModel::class.java)
 
         return binding.root

@@ -27,7 +27,7 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:orientation="vertical"
-                android:text="@string/chose"
+                android:text="@string/choose"
                 android:textColor="@color/colorSecondaryDark"
                 android:textColorLink="@color/colorPrimaryDark"
                 android:textSize="20sp"
