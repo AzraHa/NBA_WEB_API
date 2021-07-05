@@ -14,12 +14,12 @@ abstract class NBATeamsDatabase : RoomDatabase() {
         private var INSTANCE: NBATeamsDatabase? = null
         fun getInstance(context: Context): NBATeamsDatabase {
             synchronized(this) {
-                var instance = NBATeamsDatabase.INSTANCE
+                var instance = INSTANCE
                 if(instance == null) {
                     instance = Room.databaseBuilder(context.applicationContext,
                         NBATeamsDatabase::class.java,
                         "nba_teams_database").fallbackToDestructiveMigration().build()
-                    NBATeamsDatabase.INSTANCE = instance
+                    INSTANCE = instance
                 }
                 return instance
             }
