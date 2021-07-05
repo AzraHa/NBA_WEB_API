@@ -27,14 +27,11 @@ private val retrofit = Retrofit.Builder()
     .build()
 
 interface NBAApiService {
-    @Headers(
-        "X-Rapidapi-Key: 7e7560beebmshd996222ae228edap123221jsn2926c218329d",
-        "X-Rapidapi-Host: free-nba.p.rapidapi.com"
-    )
-    @GET("players")
+
+    @GET("players?rapidapi-key=7e7560beebmshd996222ae228edap123221jsn2926c218329d")
     suspend fun getPlayers(@Query("search") search: String): NBAPlayers
 
-   @GET("teams")
+   @GET("teams?rapidapi-key=7e7560beebmshd996222ae228edap123221jsn2926c218329d")
     suspend fun getTeams(): NBATeams
 
 
