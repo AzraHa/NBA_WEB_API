@@ -21,7 +21,7 @@ abstract class PlayerTeamDatabase : RoomDatabase() {
                 if(instance == null) {
                     instance = Room.databaseBuilder(context.applicationContext,
                         PlayerTeamDatabase::class.java,
-                        "Player_team_database").fallbackToDestructiveMigration().build()
+                        "player_team_database").fallbackToDestructiveMigration().build()
                     INSTANCE = instance
                 }
                 return instance

@@ -18,7 +18,7 @@ abstract class NBATeamsDatabase : RoomDatabase() {
                 if(instance == null) {
                     instance = Room.databaseBuilder(context.applicationContext,
                         NBATeamsDatabase::class.java,
-                        "Player_team_database").fallbackToDestructiveMigration().build()
+                        "nba_teams_database").fallbackToDestructiveMigration().build()
                     NBATeamsDatabase.INSTANCE = instance
                 }
                 return instance
