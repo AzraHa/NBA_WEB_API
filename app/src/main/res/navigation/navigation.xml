@@ -32,7 +32,9 @@
         tools:layout="@layout/fragment_teams" >
         <action
             android:id="@+id/action_teamsFragment_to_teamsDetailFragment"
-            app:destination="@id/teamsDetailFragment" />
+            app:destination="@id/teamsDetailFragment"
+            app:popUpTo="@id/selectFragment"
+            app:popUpToInclusive="true" />
     </fragment>
     <fragment
         android:id="@+id/playersFragment"
@@ -41,7 +43,9 @@
         tools:layout="@layout/fragment_players" >
         <action
             android:id="@+id/action_playersFragment_to_playersDetailFragment"
-            app:destination="@id/playersDetailFragment" />
+            app:destination="@id/playersDetailFragment"
+            app:popUpTo="@id/selectFragment"
+            app:popUpToInclusive="true" />
     </fragment>
     <fragment
         android:id="@+id/teamsDetailFragment"
@@ -63,8 +67,8 @@
             app:nullable="true" />
     </fragment>
     <fragment
-        android:id="@+id/aboutFragment2"
+        android:id="@+id/aboutFragment"
         android:name="com.example.nba_web_api.AboutFragment"
-        android:label="fragment_about"
+        android:label="@string/about"
         tools:layout="@layout/fragment_about" />
 </navigation>
