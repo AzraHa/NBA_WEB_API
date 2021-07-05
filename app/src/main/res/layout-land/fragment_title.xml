@@ -2,7 +2,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="com.example.nba_web_api.TitleFragment"
-    android:orientation="vertical">
+    android:orientation="horizontal">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -16,9 +16,10 @@
             android:contentDescription="@string/app_name"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.628"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.499"
+            app:layout_constraintVertical_bias="0.392"
             app:srcCompat="@drawable/ic_basketball"
             tools:ignore="VectorDrawableCompat" />
 
@@ -27,10 +28,8 @@
             android:layout_width="115dp"
             android:layout_height="37dp"
             android:layout_marginStart="32dp"
-            android:layout_marginLeft="32dp"
             android:layout_marginTop="32dp"
             android:layout_marginEnd="32dp"
-            android:layout_marginRight="32dp"
             android:gravity="center"
             android:text="@string/welcome"
             android:textColor="@color/design_default_color_background"
@@ -38,9 +37,10 @@
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.371"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.217" />
+            app:layout_constraintVertical_bias="0.286" />
 
         <Button
             android:id="@+id/button_start"
@@ -53,10 +53,10 @@
             app:backgroundTint="@color/design_default_color_background"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintHorizontal_bias="0.628"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/movie_image_id"
-            app:layout_constraintVertical_bias="0.124" />
+            app:layout_constraintVertical_bias="0.183" />
 
         <TextView
             android:id="@+id/tv_2"
@@ -69,9 +69,10 @@
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.384"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.348" />
+            app:layout_constraintVertical_bias="0.628" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

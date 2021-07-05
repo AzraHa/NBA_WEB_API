@@ -8,7 +8,7 @@ import androidx.room.TypeConverters
 import com.example.nba_web_api.network.dataNBA.Convertors
 import com.example.nba_web_api.network.dataNBA.DataPlayers
 
-@Database(entities = [DataPlayers::class], version = 1,exportSchema = false)
+@Database(entities = [DataPlayers::class], version = 1)
 @TypeConverters(Convertors::class)
 abstract class PlayersDatabase : RoomDatabase() {
     abstract val dataPlayersDao: DataPlayersDAO
