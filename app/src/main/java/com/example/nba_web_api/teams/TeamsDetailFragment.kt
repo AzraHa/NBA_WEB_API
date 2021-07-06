@@ -2,8 +2,10 @@ package com.example.nba_web_api.teams
 
 import android.annotation.SuppressLint
 import android.content.Intent
+import android.os.Build
 import android.os.Bundle
 import android.view.*
+import androidx.annotation.RequiresApi
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.example.nba_web_api.R
@@ -16,6 +18,7 @@ class TeamsDetailFragment : Fragment() {
     private var teamFullName: String = ""
 
 
+    @RequiresApi(Build.VERSION_CODES.N)
     @SuppressLint("UseRequireInsteadOfGet")
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -26,15 +29,16 @@ class TeamsDetailFragment : Fragment() {
         val binding = FragmentTeamsDetailBinding.inflate(inflater)
         binding.lifecycleOwner = this
 
-        teamName = binding.teamFullNameTv1.text.toString()
-        teamCity = binding.teamCityTv1.text.toString()
-        teamFullName = binding.teamFullNameTv1.text.toString()
 
         val teamsProperty = TeamsDetailFragmentArgs.fromBundle(arguments!!).teamId
         val viewModelFactory = TeamsDetailViewModelFactory(teamsProperty, application)
         binding.viewModelTeamsDetail = ViewModelProvider(
             this, viewModelFactory
         ).get(TeamsDetailViewModel::class.java)
+
+        teamName = teamsProperty.name.toString()
+        teamCity = teamsProperty.city.toString()
+        teamFullName = teamsProperty.full_name.toString()
 
         setHasOptionsMenu(true)
 
