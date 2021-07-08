@@ -35,12 +35,6 @@ interface NBAApiService {
     suspend fun getTeams(): NBATeams
 
 
-  //  @GET("teams/14")
-   // fun getSpecificTeam() : Call<NBAOneTeam>
-
-  // @GET("games")
-    //fun getGames(@Query("per_page") search: String): Call<NBAGames>
-
 }
 
 object NBAApi {
